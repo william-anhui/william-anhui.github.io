@@ -1,7 +1,19 @@
 (function () {
   "use strict";
 
-  var targets = document.querySelectorAll(".sec-title, .stat, .skill-card, .project, .t-item, #education .card, #more .card");
+  // floating contact button: show once the hero is scrolled past
+  var fab = document.getElementById("floatCta");
+  if (fab) {
+    var toggleFab = function () {
+      var contact = document.getElementById("contact");
+      var nearEnd = contact && contact.getBoundingClientRect().top < window.innerHeight * 0.6;
+      fab.classList.toggle("show", window.scrollY > 500 && !nearEnd);
+    };
+    window.addEventListener("scroll", toggleFab, { passive: true });
+    toggleFab();
+  }
+
+  var targets = document.querySelectorAll(".sec-title, .stat, .skill-card, .project, .t-item, #education .card, #more .card, .cta-card");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (!("IntersectionObserver" in window)) return;
