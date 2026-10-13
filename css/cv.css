@@ -737,3 +737,6 @@ body::before {
   .photo-stage { transform: none; width: auto; height: auto; }
   .reveal, .tilt { transform: none !important; }
 }
+
+/* Icon-only social buttons (GitHub, Stack Overflow) */
+.btn-icon { width: 51px; height: 51px; padding: 0; justify-content: center; font-size: 1.15rem; }
