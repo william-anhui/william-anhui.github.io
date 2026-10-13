@@ -740,3 +740,6 @@ body::before {
 
 /* Icon-only social buttons (GitHub, Stack Overflow) */
 .btn-icon { width: 51px; height: 51px; padding: 0; justify-content: center; font-size: 1.15rem; }
+.social-icons { display: inline-flex; gap: 12px; }
+.hero .cta-row { gap: 12px 10px; }
+.hero .cta-row .btn:not(.btn-icon) { padding: 12px 18px; }
